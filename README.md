@@ -1,24 +1,31 @@
-# README
+# Maksat PRO bot
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Telegram bot for [maksat.PRO](http://maksat.pro/) project
 
-Things you may want to cover:
+## Dependencies
 
-* Ruby version
+* `ruby --version #=> 2.4.1`
+* `rails --version #=> 5.1.0`
 
-* System dependencies
+## How to run
 
-* Configuration
+Copy example config files to you local and change necessary values (e.g. db username, db password or telegram bot token)
 
-* Database creation
+```shell
+cp config/database.example.yml config/database.yml
+cp config/secrets.example.yml config/secrets.yml
+```
 
-* Database initialization
+Install gems
+```shell
+bundle install
+```
 
-* How to run the test suite
+Create database and run migrations
 
-* Services (job queues, cache servers, search engines, etc.)
+```shell
+bundle exec rake db:create
+bundle exec rake db:migrate
+```
 
-* Deployment instructions
-
-* ...
+Run poller `bundle exec rake telegram:bot:poller` or use `rake bundle exec telegram:bot:set_webhook` to update webhooks
