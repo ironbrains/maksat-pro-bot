@@ -4,6 +4,7 @@ class TelegramWebhooksController < Telegram::Bot::UpdatesController
   end
 
   def message(message)
-    respond_with :message, text: message['text'], reply_markup: { keyboard: [['Yes'], ['No']] }
+    user = User.find_or_create_by_telegram message['from']
+    respond_with :message, ScreenService.get_message(user.current_screen)
   end
 end

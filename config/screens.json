@@ -1,0 +1,36 @@
+{
+  "start": {
+    "message": {
+      "text": "Hello",
+      "reply_markup": {
+        "keyboard": [
+          [
+            "events"
+          ],
+          [
+            "button1",
+            "button2"
+          ],
+          [
+            "button3",
+            "button4"
+          ]
+        ]
+      }
+    },
+    "next_screens": {
+      "events": "events"
+    }
+  },
+  "events": {
+    "message": {
+      "text": "events",
+      "reply_markup": {
+        "remove_keyboard": true
+      }
+    },
+    "next_screens": {
+      "events": "events"
+    }
+  }
+}
