@@ -1,15 +1,68 @@
 {
-  "start": {
+  "init": {
+    "next_screens": {
+      "success": "start"
+    }
+  },
+  "username": {
     "message": {
-      "text": "Hello",
+      "text": "%{text}",
+      "reply_markup": {
+        "remove_keyboard": true
+      }
+    },
+    "next_screens": {
+      "success": "secret",
+      "error": "username_again"
+    }
+  },
+  "username_again": {
+    "message": {
+      "text": "%{text}",
+      "reply_markup": {
+        "remove_keyboard": true
+      }
+    },
+    "next_screens": {
+      "success": "secret",
+      "error": "username_again"
+    }
+  },
+  "secret": {
+    "message": {
+      "text": "%{text}",
+      "reply_markup": {
+        "remove_keyboard": true
+      }
+    },
+    "next_screens": {
+      "success": "menu",
+      "error": "secret_again"
+    }
+  },
+  "secret_again": {
+    "message": {
+      "text": "%{text}",
+      "reply_markup": {
+        "remove_keyboard": true
+      }
+    },
+    "next_screens": {
+      "success": "menu",
+      "error": "secret_again"
+    }
+  },
+  "menu": {
+    "message": {
+      "text": "%{text}",
       "reply_markup": {
         "keyboard": [
           [
             "events"
           ],
           [
-            "button1",
-            "button2"
+            "time_line",
+            "contacts"
           ],
           [
             "button3",
@@ -24,13 +77,13 @@
   },
   "events": {
     "message": {
-      "text": "events",
+      "text": "%{text}",
       "reply_markup": {
         "remove_keyboard": true
       }
     },
     "next_screens": {
-      "events": "events"
+      "success": "menu"
     }
   }
 }
