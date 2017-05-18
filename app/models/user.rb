@@ -8,7 +8,7 @@ class User < ApplicationRecord
       user_params = {
         telegram_id: from['id'],
         telegram_username: from['username'],
-        current_screen: 'start'
+        current_screen: 'username'
       }
       create user_params
     end

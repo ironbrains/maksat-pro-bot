@@ -1,9 +1,4 @@
 {
-  "init": {
-    "next_screens": {
-      "success": "start"
-    }
-  },
   "username": {
     "message": {
       "text": "%{text}",

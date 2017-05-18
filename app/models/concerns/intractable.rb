@@ -1,15 +1,23 @@
 module Intractable
   extend ActiveSupport::Concern
 
-  def init(_message)
+  def start(_message)
     'success'
   end
 
-  def start(_message)
+  def username(_message)
     'error'
   end
 
-  def again(_message)
+  def username_again(_message)
+    'success'
+  end
+
+  def secret(_message)
+    'error'
+  end
+
+  def secret_again(_message)
     'success'
   end
 

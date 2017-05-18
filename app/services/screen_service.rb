@@ -3,7 +3,7 @@ class ScreenService
     @@screens ||= JSON.parse File.read(File.join(Rails.root, 'config', 'screens.json'))
   end
 
-  def self.get_message(screen, _params = {})
+  def self.get_message(screen = 'username', _params = {})
     message = screens[screen]['message'].clone
     message['text'] = I18n.t 'text', scope: ['screens', screen]
     if keyboard = message['reply_markup']['keyboard'].clone

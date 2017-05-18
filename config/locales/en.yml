@@ -1,5 +1,6 @@
 en:
   screens:
+    init:
     username:
       text: "Hello! Welcome to Maksat PRO telegram bot!\nPlease enter your Maksat PRO user name"
     username_again:
